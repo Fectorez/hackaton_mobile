@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/association_slide"
+            android:id="@+id/association_user_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/user"
             android:background="@color/LightCoral"/>
         <Button
-            android:id="@+id/user_slide"
+            android:id="@+id/user_user_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/association"
@@ -33,30 +33,46 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/username_et"
-        android:layout_width="match_parent"
+        android:id="@+id/username_user_signin"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/username"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:layout_marginTop="40dp"
         />
 
     <EditText
-        android:id="@+id/password_et"
-        android:layout_width="match_parent"
+        android:id="@+id/password_user_signin"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:inputType="textPassword"
         android:layout_marginTop="30dp"
         />
 
     <Button
-        android:id="@+id/connect_button"
-        android:layout_width="match_parent"
+        android:id="@+id/connect_button_user_signin"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/connection"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        android:textColor="@color/White"
+        android:background="@color/FireBrick"
         />
+
+    <Button
+        android:id="@+id/register_button_user_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/Snow"
+        android:text="@string/non_inscrit"
+        android:textColor="@color/FireBrick"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

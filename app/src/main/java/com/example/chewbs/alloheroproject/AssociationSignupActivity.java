@@ -20,24 +20,24 @@ public class AssociationSignupActivity extends AppCompatActivity implements Sign
 
     AuthPresenter authPresenter;
 
-    @BindView(R.id.creation_date_et)
-    EditText creation_date_et;
-    @BindView(R.id.name_et)
-    EditText name_et;
-    @BindView(R.id.mail_et)
-    EditText mail_et;
-    @BindView(R.id.phone_number_et)
-    EditText phone_number_et;
-    @BindView(R.id.address_et)
-    EditText address_et;
-    @BindView(R.id.postal_code_et)
-    EditText postal_code_et;
-    @BindView(R.id.city_et)
-    EditText city_et;
-    @BindView(R.id.password_et)
-    EditText password_et;
-    @BindView(R.id.siret_et)
-    EditText siret_et;
+    @BindView(R.id.creation_date_association_signup)
+    EditText creation_date_association_signup;
+    @BindView(R.id.name_association_signup)
+    EditText name_association_signup;
+    @BindView(R.id.mail_association_signup)
+    EditText mail_association_signup;
+    @BindView(R.id.phone_number_association_signup)
+    EditText phone_number_association_signup;
+    @BindView(R.id.address_association_signup)
+    EditText address_association_signup;
+    @BindView(R.id.postal_code_association_signup)
+    EditText postal_code_association_signup;
+    @BindView(R.id.city_association_signup)
+    EditText city_association_signup;
+    @BindView(R.id.password_association_signup)
+    EditText password_association_signup;
+    @BindView(R.id.siret_association_signup)
+    EditText siret_association_signup;
 
     List<String> data;
 
@@ -49,27 +49,30 @@ public class AssociationSignupActivity extends AppCompatActivity implements Sign
 
         authPresenter = new AuthPresenter(this);
 
-        data.add(creation_date_et.getText().toString());
-        data.add(name_et.getText().toString());
-        data.add(mail_et.getText().toString());
-        data.add(phone_number_et.getText().toString());
-        data.add(address_et.getText().toString());
-        data.add(postal_code_et.getText().toString());
-        data.add(city_et.getText().toString());
-        data.add(password_et.getText().toString());
-        data.add(siret_et.getText().toString());
     }
 
-    @OnClick(R.id.register_button)
+    @OnClick(R.id.user_association_signup)
+    public void goToUser() {
+        Intent intent = new Intent(AssociationSignupActivity.this, UserSignupActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.register_button_association_signup)
     public void signup() {
         if (areFieldsValid()) {
             authPresenter.signUpUser(data);
         }
     }
 
+    @OnClick(R.id.connect_button_association_signup)
+    public void goToConnect() {
+        Intent intent = new Intent(AssociationSignupActivity.this, AssociationSigninActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void register(String token) {
-        String identifier = mail_et.getText().toString();
+        String identifier = mail_association_signup.getText().toString();
         AssociationData associationData = new AssociationData(identifier);
 
         associationData.setToken(this, token);
@@ -90,6 +93,16 @@ public class AssociationSignupActivity extends AppCompatActivity implements Sign
                 return false;
             }
         }
+        data.add(creation_date_association_signup.getText().toString());
+        data.add(name_association_signup.getText().toString());
+        data.add(mail_association_signup.getText().toString());
+        data.add(phone_number_association_signup.getText().toString());
+        data.add(address_association_signup.getText().toString());
+        data.add(postal_code_association_signup.getText().toString());
+        data.add(city_association_signup.getText().toString());
+        data.add(password_association_signup.getText().toString());
+        data.add(siret_association_signup.getText().toString());
+
         return true;
     }
 }

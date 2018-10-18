@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/association_slide"
+            android:id="@+id/association_user_signup"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/user"
             android:background="@color/LightCoral"/>
         <Button
-            android:id="@+id/user_slide"
+            android:id="@+id/user_user_signup"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/association"
@@ -33,82 +33,98 @@
         android:layout_marginTop="0dp"/>
 
     <EditText
-        android:id="@+id/firstname_et"
-        android:layout_width="match_parent"
+        android:id="@+id/firstname_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/firstname"
         android:inputType="text"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/lastname_et"
-        android:layout_width="match_parent"
+        android:id="@+id/lastname_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/lastname"
         android:inputType="text"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/password_et"
-        android:layout_width="match_parent"
+        android:id="@+id/password_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:inputType="textPassword"
         />
 
     <EditText
-        android:id="@+id/mail_et"
-        android:layout_width="match_parent"
+        android:id="@+id/mail_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/mail"
         android:inputType="textEmailAddress"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/phone_number_et"
-        android:layout_width="match_parent"
+        android:id="@+id/phone_number_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/phone_number"
         android:inputType="phone"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <TextView
-        android:id="@+id/presentation_tv"
+        android:id="@+id/presentation_user_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         />
 
     <EditText
-        android:id="@+id/birthdate_et"
-        android:layout_width="match_parent"
+        android:id="@+id/birthdate_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/birthdate"
         android:inputType="date"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/siret_et"
-        android:layout_width="match_parent"
+        android:id="@+id/siret_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/siret"
         android:inputType="number"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
 
     <Button
-        android:id="@+id/register_button"
-        android:layout_width="match_parent"
+        android:id="@+id/register_button_user_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/connection"
         android:layout_marginTop="10dp"
+        android:background="@color/FireBrick"
+        android:textColor="@color/White"
+        android:layout_gravity="center"
         />
+
+    <Button
+        android:id="@+id/connect_button_user_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/Snow"
+        android:text="@string/inscrit"
+        android:textColor="@color/FireBrick"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

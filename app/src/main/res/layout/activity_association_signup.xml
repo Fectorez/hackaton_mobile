@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/association_slide"
+            android:id="@+id/association_association_signup"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/user"
             android:background="@color/Snow"/>
         <Button
-            android:id="@+id/user_slide"
+            android:id="@+id/user_association_signup"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/association"
@@ -33,87 +33,103 @@
         android:layout_marginTop="0dp"/>
 
     <EditText
-        android:id="@+id/creation_date_et"
-        android:layout_width="match_parent"
+        android:id="@+id/creation_date_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/username"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/name_et"
-        android:layout_width="match_parent"
+        android:id="@+id/name_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/mail_et"
-        android:layout_width="match_parent"
+        android:id="@+id/mail_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/mail"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/phone_number_et"
-        android:layout_width="match_parent"
+        android:id="@+id/phone_number_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/phone_number"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
     <EditText
-        android:id="@+id/address_et"
-        android:layout_width="match_parent"
+        android:id="@+id/address_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/address"
-        android:gravity="center"
+        android:layout_gravity="center"
         />
 
     <EditText
-        android:id="@+id/postal_code_et"
-        android:layout_width="match_parent"
+        android:id="@+id/postal_code_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/postal_code"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:inputType="textPassword"
         />
 
     <EditText
-        android:id="@+id/city_et"
-        android:layout_width="match_parent"
+        android:id="@+id/city_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/city"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:inputType="textPassword"
         />
 
     <EditText
-        android:id="@+id/password_et"
-        android:layout_width="match_parent"
+        android:id="@+id/password_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:inputType="textPassword"
         />
 
     <EditText
-        android:id="@+id/siret_et"
-        android:layout_width="match_parent"
+        android:id="@+id/siret_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/siret"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:inputType="textPassword"
         />
 
 
     <Button
-        android:id="@+id/register_button"
-        android:layout_width="match_parent"
+        android:id="@+id/register_button_association_signup"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/connection"
         android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/White"
+        android:background="@color/FireBrick"
         />
+
+    <Button
+        android:id="@+id/connect_button_association_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/Snow"
+        android:text="@string/inscrit"
+        android:textColor="@color/FireBrick"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

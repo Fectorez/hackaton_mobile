@@ -14,4 +14,6 @@
     <string name="firstname">firstname</string>
     <string name="association">Association</string>
     <string name="user">User</string>
+    <string name="non_inscrit">Vous n\'êtes pas encore inscrit ?</string>
+    <string name="inscrit">Vous êtes déjà inscrit ?</string>
 </resources>

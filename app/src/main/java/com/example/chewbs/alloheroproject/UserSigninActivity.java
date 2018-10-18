@@ -4,11 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,10 +21,10 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
 
     AuthPresenter authPresenter;
 
-    @BindView(R.id.username_et)
-    EditText username_et;
-    @BindView(R.id.password_et)
-    EditText password_et;
+    @BindView(R.id.username_user_signin)
+    EditText username_user_signin;
+    @BindView(R.id.password_user_signin)
+    EditText password_user_signin;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 
@@ -42,16 +38,28 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
         authPresenter = new AuthPresenter(this);
     }
 
-    @OnClick(R.id.connect_button)
+    @OnClick(R.id.association_user_signin)
+    public void goToAssociation() {
+        Intent intent = new Intent(UserSigninActivity.this, AssociationSigninActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.connect_button_user_signin)
     public void signin() {
         if (areFieldsValid()) {
-            authPresenter.signin("user", username_et.getText().toString(), password_et.getText().toString());
+            authPresenter.signin("user", username_user_signin.getText().toString(), password_user_signin.getText().toString());
         }
+    }
+
+    @OnClick(R.id.register_button_user_signin)
+    public void goToRegister() {
+        Intent intent = new Intent(UserSigninActivity.this, UserSignupActivity.class);
+        startActivity(intent);
     }
 
     @Override
     public void authenticate(String token) {
-        String name = username_et.getText().toString();
+        String name = username_user_signin.getText().toString();
         UserData userData = new UserData(name);
 
         User.IS_ONLINE = true;
@@ -67,8 +75,8 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
     }
 
     boolean areFieldsValid() {
-        String username = username_et.getText().toString();
-        String password = password_et.getText().toString();
+        String username = username_user_signin.getText().toString();
+        String password = password_user_signin.getText().toString();
 
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Au moins un champs incomplet.", Toast.LENGTH_LONG).show();

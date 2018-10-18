@@ -21,20 +21,20 @@ public class UserSignupActivity extends AppCompatActivity implements SignupView 
 
     AuthPresenter authPresenter;
 
-    @BindView(R.id.firstname_et)
-    EditText firstname_et;
-    @BindView(R.id.lastname_et)
-    EditText lastname_et;
-    @BindView(R.id.password_et)
-    EditText password_et;
-    @BindView(R.id.mail_et)
-    EditText mail_et;
-    @BindView(R.id.phone_number_et)
-    EditText phone_number_et;
-    @BindView(R.id.presentation_tv)
-    TextView presentation_tv;
-    @BindView(R.id.birthdate_et)
-    EditText birthdate_et;
+    @BindView(R.id.firstname_user_signup)
+    EditText firstname_user_signup;
+    @BindView(R.id.lastname_user_signup)
+    EditText lastname_user_signup;
+    @BindView(R.id.password_user_signup)
+    EditText password_user_signup;
+    @BindView(R.id.mail_user_signup)
+    EditText mail_user_signup;
+    @BindView(R.id.phone_number_user_signup)
+    EditText phone_number_user_signup;
+    @BindView(R.id.presentation_user_signup)
+    TextView presentation_user_signup;
+    @BindView(R.id.birthdate_user_signup)
+    EditText birthdate_user_signup;
 
     List<String> data;
 
@@ -47,25 +47,30 @@ public class UserSignupActivity extends AppCompatActivity implements SignupView 
 
         authPresenter = new AuthPresenter(this);
 
-        data.add(firstname_et.getText().toString());
-        data.add(lastname_et.getText().toString());
-        data.add(password_et.getText().toString());
-        data.add(mail_et.getText().toString());
-        data.add(phone_number_et.getText().toString());
-        data.add(presentation_tv.getText().toString());
-        data.add(birthdate_et.getText().toString());
     }
 
-    @OnClick(R.id.register_button)
+    @OnClick(R.id.association_user_signup)
+    public void goToAssociation() {
+        Intent intent = new Intent(UserSignupActivity.this, AssociationSignupActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.register_button_user_signup)
     public void signup() {
         if (areFieldsValid()) {
             authPresenter.signUpUser(data);
         }
     }
 
+    @OnClick(R.id.connect_button_user_signup)
+    public void goToConnect() {
+        Intent intent = new Intent(UserSignupActivity.this, UserSigninActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void register(String token) {
-        String identifier = mail_et.getText().toString();
+        String identifier = mail_user_signup.getText().toString();
         UserData userData = new UserData(identifier);
 
         userData.setToken(this, token);
@@ -86,6 +91,15 @@ public class UserSignupActivity extends AppCompatActivity implements SignupView 
                 return false;
             }
         }
+
+        data.add(firstname_user_signup.getText().toString());
+        data.add(lastname_user_signup.getText().toString());
+        data.add(password_user_signup.getText().toString());
+        data.add(mail_user_signup.getText().toString());
+        data.add(phone_number_user_signup.getText().toString());
+        data.add(presentation_user_signup.getText().toString());
+        data.add(birthdate_user_signup.getText().toString());
+
         return true;
     }
 }
