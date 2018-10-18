@@ -18,5 +18,11 @@
     <string name="inscrit">Vous êtes déjà inscrit ?</string>
     <string name="title_activity_create_demand">createDemandActivity</string>
     <string name="dem_title">Titre</string>
+    <string name="create_demand">Créer la demande</string>
+    <string name="dem_description">Description</string>
+    <string name="dem_street">Rue</string>
+    <string name="dem_postal">Code Postal</string>
+    <string name="dem_date">Date</string>
+    <string name="dem_time">Heure</string>
 
 </resources>

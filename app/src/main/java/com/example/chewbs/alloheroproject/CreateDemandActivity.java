@@ -22,13 +22,14 @@ public class CreateDemandActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_demand);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         title_et = findViewById(R.id.dem_title);
         description_et = findViewById(R.id.dem_description);
         street_et= findViewById(R.id.dem_street);;
         postal_et= findViewById(R.id.dem_postal);
+
+
 
 
     }

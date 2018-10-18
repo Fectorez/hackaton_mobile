@@ -19,27 +19,50 @@
             android:id="@+id/dem_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/dem_title" />
+            android:hint="@string/dem_title"
+            android:inputType="text"
+            />
 
         <EditText
             android:id="@+id/dem_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/dem_title"
-
+            android:inputType="text"
             />
 
         <EditText
             android:id="@+id/dem_street"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/dem_title" />
+            android:hint="@string/dem_title"
+            android:inputType="text"
+            />
 
         <EditText
             android:id="@+id/dem_postal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/dem_title" />
+            android:hint="@string/dem_title"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/dem_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dem_title"
+            android:inputType="date"
+            />
+        <EditText
+            android:id="@+id/dem_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dem_title"
+            android:inputType="time"
+            />
+
+
 
 
 
