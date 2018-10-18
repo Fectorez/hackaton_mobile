@@ -1,8 +1,14 @@
 package com.example.chewbs.alloheroproject;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -24,6 +30,8 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
     @BindView(R.id.password_et)
     EditText password_et;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +40,6 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
         ButterKnife.bind(this);
 
         authPresenter = new AuthPresenter(this);
-
     }
 
     @OnClick(R.id.connect_button)

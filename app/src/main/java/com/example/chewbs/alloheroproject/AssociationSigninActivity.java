@@ -32,7 +32,6 @@ public class AssociationSigninActivity extends AppCompatActivity implements Sign
         ButterKnife.bind(this);
 
         authPresenter = new AuthPresenter(this);
-
     }
 
     @OnClick(R.id.connect_button)

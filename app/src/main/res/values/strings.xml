@@ -12,4 +12,6 @@
     <string name="birthdate">birthdate</string>
     <string name="lastname">lastname</string>
     <string name="firstname">firstname</string>
+    <string name="association">Association</string>
+    <string name="user">User</string>
 </resources>

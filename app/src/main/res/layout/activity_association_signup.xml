@@ -6,6 +6,24 @@
     tools:context=".UserSigninActivity"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/association_slide"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="@string/user"
+            android:background="@color/Snow"/>
+        <Button
+            android:id="@+id/user_slide"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="@string/association"
+            android:background="@color/LightCoral"/>
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
