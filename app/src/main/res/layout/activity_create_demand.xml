@@ -74,6 +74,8 @@
           android:text="@string/create_demand"
           android:textAlignment="center"
           android:layout_gravity="center_vertical|center_horizontal"
+          android:background="@color/Red"
+          android:textColor="@color/White"
           />
   </GridLayout>
 

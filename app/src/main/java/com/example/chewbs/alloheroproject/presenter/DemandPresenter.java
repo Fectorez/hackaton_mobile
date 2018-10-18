@@ -15,7 +15,7 @@ public class DemandPresenter {
     DemandView demandView ;
 
     public void put(final Demand demand){
-        String baseUrl = "http://10.0.2.2:3000/demand/put";
+        String baseUrl = "http://127.0.0.1:8080/demand/put";
         JSONObject demandJson = new JSONObject();
         try {
             demandJson.put("demande", demand);
