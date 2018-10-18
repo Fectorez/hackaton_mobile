@@ -9,22 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserSigninActivity">
+        <activity android:name=".authentication.UserSigninActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserSignupActivity" />
-        <activity android:name=".AssociationSigninActivity" />
-        <activity android:name=".AssociationSignupActivity" />
-        <activity android:name=".AssociationHomeActivity" />
-        <activity android:name=".UserHomeActivity" />
-        <activity android:name=".UserAssociationListActivity" />
-        <activity android:name=".AssociationSelectedLocationActivity" />
-        <activity android:name=".AssociationSelectedUserActivity" />
-        <activity android:name=".UserSelectedAssociationActivity"></activity>
+        <activity android:name=".authentication.UserSignupActivity" />
+        <activity android:name=".authentication.AssociationSigninActivity" />
+        <activity android:name=".authentication.AssociationSignupActivity" />
+        <activity android:name=".association.AssociationHomeActivity" />
+        <activity android:name=".user.UserHomeActivity" />
+        <activity android:name=".user.UserAssociationListActivity" />
+        <activity android:name=".association.AssociationSelectedLocationActivity" />
+        <activity android:name=".association.AssociationSelectedUserActivity" />
+        <activity android:name=".user.UserSelectedAssociationActivity" />
+        <activity android:name=".association.AssociationUserListActivity"></activity>
     </application>
 
 </manifest>

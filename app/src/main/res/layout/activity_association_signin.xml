@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserSigninActivity"
+    tools:context=".authentication.UserSigninActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -20,6 +20,7 @@
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/association"
+            android:backgroundTintMode="src_in"
             android:background="@color/LightCoral"/>
 
     </LinearLayout>

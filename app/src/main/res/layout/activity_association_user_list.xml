@@ -8,17 +8,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/assocations_to_help"
+        android:text="@string/heroes"
         android:textStyle="bold"
         android:textSize="25sp"
         />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_associations"
+        android:id="@+id/recyclerview_heroes"
         android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem = "@layout/item_association">
+        tools:listitem = "@layout/item_user">
     </android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>

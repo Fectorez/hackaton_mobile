@@ -1,19 +1,22 @@
 <resources>
     <string name="app_name">AlloHeroProject</string>
-    <string name="username">username</string>
-    <string name="password">password</string>
-    <string name="connection">connection</string>
-    <string name="mail">mail</string>
-    <string name="phone_number">phone_number</string>
-    <string name="address">address</string>
-    <string name="postal_code">postal_code</string>
-    <string name="city">city</string>
-    <string name="siret">siret</string>
-    <string name="birthdate">birthdate</string>
-    <string name="lastname">lastname</string>
-    <string name="firstname">firstname</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="connection">Connexion</string>
+    <string name="mail">e-mail</string>
+    <string name="phone_number">n°téléphone</string>
+    <string name="address">Adresse</string>
+    <string name="postal_code">Code Postal</string>
+    <string name="city">Ville</string>
+    <string name="siret">n°SIRET</string>
+    <string name="birthdate">Date de naissance</string>
+    <string name="lastname">Nom</string>
+    <string name="firstname">Prénom</string>
     <string name="association">Association</string>
-    <string name="user">User</string>
+    <string name="user">Utlisateur</string>
     <string name="non_inscrit">Vous n\'êtes pas encore inscrit ?</string>
     <string name="inscrit">Vous êtes déjà inscrit ?</string>
+    <string name="heroes">Heroes</string>
+    <string name="assocations_to_help">Associations à aider</string>
+    <string name="asks">Demandes</string>
 </resources>

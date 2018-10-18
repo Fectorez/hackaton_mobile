@@ -1,0 +1,15 @@
+package com.example.chewbs.alloheroproject.association;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.example.chewbs.alloheroproject.R;
+
+public class AssociationSelectedUserActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_association_selected_user);
+    }
+}
