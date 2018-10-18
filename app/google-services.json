@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "703784681931",
+    "firebase_url": "https://alloheroproject.firebaseio.com",
+    "project_id": "alloheroproject",
+    "storage_bucket": "alloheroproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703784681931:android:901f769086d35e91",
+        "android_client_info": {
+          "package_name": "com.example.chewbs.alloheroproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703784681931-d64lac5dju61blk7utguf10lrqgsqiud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chewbs.alloheroproject",
+            "certificate_hash": "fde82e742bffcb9dd8fe8d3dc535df8f234566e7"
+          }
+        },
+        {
+          "client_id": "703784681931-2ke1c9d2ust076qr7i5o2obg8pu2fmqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQe4YNlZCysJeFfxabtpKsHTuXvYeC2kk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703784681931-2ke1c9d2ust076qr7i5o2obg8pu2fmqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
