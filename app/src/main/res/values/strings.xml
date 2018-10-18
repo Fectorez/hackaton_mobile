@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AlloHeroProject</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="connection">connection</string>
+    <string name="mail">mail</string>
+    <string name="phone_number">phone_number</string>
+    <string name="address">address</string>
+    <string name="postal_code">postal_code</string>
+    <string name="city">city</string>
+    <string name="siret">siret</string>
+    <string name="birthdate">birthdate</string>
+    <string name="lastname">lastname</string>
+    <string name="firstname">firstname</string>
 </resources>

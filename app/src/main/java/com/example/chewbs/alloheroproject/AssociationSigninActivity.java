@@ -1,23 +1,27 @@
 package com.example.chewbs.alloheroproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.chewbs.alloheroproject.R;
-import com.example.chewbs.alloheroproject.model.UserData;
+import com.example.chewbs.alloheroproject.model.AssociationData;
 import com.example.chewbs.alloheroproject.presenter.AuthPresenter;
-import com.example.chewbs.alloheroproject.view.AuthView;
+import com.example.chewbs.alloheroproject.view.SigninView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class AssociationSigninActivity extends AppCompatActivity implements AuthView {
+public class AssociationSigninActivity extends AppCompatActivity implements SigninView {
 
     AuthPresenter authPresenter;
 
+    @BindView(R.id.username_et)
     EditText username_et;
+    @BindView(R.id.password_et)
     EditText password_et;
 
     @Override
@@ -25,15 +29,15 @@ public class AssociationSigninActivity extends AppCompatActivity implements Auth
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_association_signin);
 
-        authPresenter = new AuthPresenter(this);
+        ButterKnife.bind(this);
 
-        username_et = findViewById(R.id.username);
-        password_et = findViewById(R.id.password);
+        authPresenter = new AuthPresenter(this);
 
     }
 
-    @OnClick(R.id.connect_button) public void signin() {
-        if(areFieldsValid()){
+    @OnClick(R.id.connect_button)
+    public void signin() {
+        if (areFieldsValid()) {
             authPresenter.signin("association", username_et.getText().toString(), password_et.getText().toString());
         }
     }
@@ -41,16 +45,16 @@ public class AssociationSigninActivity extends AppCompatActivity implements Auth
     @Override
     public void authenticate(String token) {
         String name = username_et.getText().toString();
-        UserData userData = new UserData(name);
+        AssociationData associationData = new AssociationData(name);
 
-        UserData.setToken(this, token);
+        associationData.setToken(this, token);
 
         Intent intent = new Intent(AssociationSigninActivity.this, AssociationHomeActivity.class);
         startActivity(intent);
     }
 
     @Override
-    public void errorConnectData(){
+    public void errorConnectData() {
         Toast.makeText(this, "Utilisateur inconnu", Toast.LENGTH_SHORT).show();
     }
 

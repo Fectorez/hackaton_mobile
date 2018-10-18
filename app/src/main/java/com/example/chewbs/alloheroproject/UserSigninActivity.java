@@ -1,24 +1,27 @@
 package com.example.chewbs.alloheroproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Button;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.chewbs.alloheroproject.model.User;
 import com.example.chewbs.alloheroproject.model.UserData;
 import com.example.chewbs.alloheroproject.presenter.AuthPresenter;
-import com.example.chewbs.alloheroproject.view.AuthView;
+import com.example.chewbs.alloheroproject.view.SigninView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class UserSigninActivity extends AppCompatActivity implements AuthView {
+public class UserSigninActivity extends AppCompatActivity implements SigninView {
 
     AuthPresenter authPresenter;
 
+    @BindView(R.id.username_et)
     EditText username_et;
+    @BindView(R.id.password_et)
     EditText password_et;
 
     @Override
@@ -26,15 +29,15 @@ public class UserSigninActivity extends AppCompatActivity implements AuthView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_signin);
 
-        authPresenter = new AuthPresenter(this);
+        ButterKnife.bind(this);
 
-        username_et = findViewById(R.id.username);
-        password_et = findViewById(R.id.password);
+        authPresenter = new AuthPresenter(this);
 
     }
 
-    @OnClick(R.id.connect_button) public void signin() {
-        if(areFieldsValid()){
+    @OnClick(R.id.connect_button)
+    public void signin() {
+        if (areFieldsValid()) {
             authPresenter.signin("user", username_et.getText().toString(), password_et.getText().toString());
         }
     }
@@ -44,14 +47,15 @@ public class UserSigninActivity extends AppCompatActivity implements AuthView {
         String name = username_et.getText().toString();
         UserData userData = new UserData(name);
 
-        UserData.setToken(this, token);
+        User.IS_ONLINE = true;
+        userData.setToken(this, token);
 
         Intent intent = new Intent(UserSigninActivity.this, UserHomeActivity.class);
         startActivity(intent);
     }
 
     @Override
-    public void errorConnectData(){
+    public void errorConnectData() {
         Toast.makeText(this, "Utilisateur inconnu", Toast.LENGTH_SHORT).show();
     }
 
