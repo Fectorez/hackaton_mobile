@@ -24,7 +24,11 @@
         <activity android:name=".UserAssociationListActivity" />
         <activity android:name=".AssociationSelectedLocationActivity" />
         <activity android:name=".AssociationSelectedUserActivity" />
-        <activity android:name=".UserSelectedAssociationActivity"></activity>
+        <activity android:name=".UserSelectedAssociationActivity" />
+        <activity
+            android:name=".CreateDemandActivity"
+            android:label="@string/title_activity_create_demand"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

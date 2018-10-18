@@ -16,4 +16,7 @@
     <string name="user">User</string>
     <string name="non_inscrit">Vous n\'êtes pas encore inscrit ?</string>
     <string name="inscrit">Vous êtes déjà inscrit ?</string>
+    <string name="title_activity_create_demand">createDemandActivity</string>
+    <string name="dem_title">Titre</string>
+
 </resources>
