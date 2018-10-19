@@ -16,7 +16,17 @@
     <string name="user">Utlisateur</string>
     <string name="non_inscrit">Vous n\'êtes pas encore inscrit ?</string>
     <string name="inscrit">Vous êtes déjà inscrit ?</string>
-    <string name="heroes">Heroes</string>
+    <string name="heroes">Heros</string>
     <string name="assocations_to_help">Associations à aider</string>
-    <string name="asks">Demandes</string>
+    <string name="asks">Demandes en cours</string>
+    <string name="email_test">yohann.test@gmail.com</string>
+    <string name="password_test">TEST</string>
+    <string name="todo">TODO</string>
+    <string name="close">X</string>
+    <string name="retour"><![CDATA[<]]></string>
+    <string name="distance">distance</string>
+    <string name="association_name">Nom de l\'association</string>
+    <string name="description">Description</string>
+    <string name="register">Inscription</string>
+    <string name="creation_date">Date de création</string>
 </resources>

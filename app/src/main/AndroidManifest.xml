@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.chewbs.alloheroproject">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission-group.CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE"
+        tools:ignore="ProtectedPermissions" />
+
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".authentication.UserSigninActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +31,14 @@
         <activity android:name=".authentication.UserSignupActivity" />
         <activity android:name=".authentication.AssociationSigninActivity" />
         <activity android:name=".authentication.AssociationSignupActivity" />
-        <activity android:name=".association.AssociationHomeActivity" />
+        <activity android:name=".association.AssociationDemandListActivity" />
         <activity android:name=".user.UserHomeActivity" />
         <activity android:name=".user.UserAssociationListActivity" />
-        <activity android:name=".association.AssociationSelectedLocationActivity" />
-        <activity android:name=".association.AssociationSelectedUserActivity" />
+        <activity android:name=".association.AssociationSelectedDemandActivity" />
+        <activity android:name=".association.AssociationSelectedHeroActivity" />
         <activity android:name=".user.UserSelectedAssociationActivity" />
-        <activity android:name=".association.AssociationUserListActivity"></activity>
+        <activity android:name=".association.AssociationUserListActivity">
+        </activity>
     </application>
 
 </manifest>

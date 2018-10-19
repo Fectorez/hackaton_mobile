@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.chewbs.alloheroproject.R;
-import com.example.chewbs.alloheroproject.association.AssociationHomeActivity;
+import com.example.chewbs.alloheroproject.association.AssociationDemandListActivity;
 import com.example.chewbs.alloheroproject.model.AssociationData;
 import com.example.chewbs.alloheroproject.presenter.AuthPresenter;
 import com.example.chewbs.alloheroproject.view.SigninView;
@@ -44,7 +44,7 @@ public class AssociationSigninActivity extends AppCompatActivity implements Sign
     @OnClick(R.id.connect_button_association_signin)
     public void signin() {
         if (areFieldsValid()) {
-            authPresenter.signin("association", username_association_signin.getText().toString(), password_association_signin.getText().toString());
+            authPresenter.signin(this,"association", username_association_signin.getText().toString(), password_association_signin.getText().toString());
         }
     }
 
@@ -61,7 +61,7 @@ public class AssociationSigninActivity extends AppCompatActivity implements Sign
 
         associationData.setToken(this, token);
 
-        Intent intent = new Intent(AssociationSigninActivity.this, AssociationHomeActivity.class);
+        Intent intent = new Intent(AssociationSigninActivity.this, AssociationDemandListActivity.class);
         startActivity(intent);
     }
 

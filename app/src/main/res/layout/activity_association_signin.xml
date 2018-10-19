@@ -9,19 +9,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/association_association_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
+            android:background="@color/FireBrick"
             android:text="@string/user"
-            android:background="@color/Snow"/>
+
+            android:textColor="@color/White"
+            android:textStyle="bold" />
         <Button
             android:id="@+id/user_association_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/association"
             android:backgroundTintMode="src_in"
-            android:background="@color/LightCoral"/>
+            android:textAllCaps="false"
+            android:background="@color/Snow"/>
 
     </LinearLayout>
 

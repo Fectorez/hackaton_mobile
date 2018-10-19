@@ -1,4 +1,4 @@
-package com.example.chewbs.alloheroproject.user;
+package com.example.chewbs.alloheroproject.association;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,20 +14,21 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class UserAssociationListActivity extends AppCompatActivity implements AssociationView, AssociationListAdapter.Listener {
+public class AssociationDemandListActivity extends AppCompatActivity implements AssociationView, AssociationListAdapter.Listener {
 
     private List<Association> list_associations = new ArrayList<>();
 
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-    @BindView(R.id.recyclerview_associations) RecyclerView recyclerView;
+    @BindView(R.id.recyclerview_home_association) RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_association_list);
+        setContentView(R.layout.activity_association_demands);
     }
+
 
     @Override
     public void onAskClick(Association association) {

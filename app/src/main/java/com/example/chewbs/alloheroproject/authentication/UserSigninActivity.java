@@ -1,13 +1,18 @@
 package com.example.chewbs.alloheroproject.authentication;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.androidnetworking.AndroidNetworking;
 import com.example.chewbs.alloheroproject.R;
 import com.example.chewbs.alloheroproject.model.User;
 import com.example.chewbs.alloheroproject.model.UserData;
@@ -35,6 +40,12 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_signin);
 
+        int permissionCheck = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.INTERNET);
+
+        Log.e("INTERNET1", String.valueOf(permissionCheck));
+        Log.e("INTERNET2", String.valueOf(PackageManager.PERMISSION_GRANTED));
+
         ButterKnife.bind(this);
 
         authPresenter = new AuthPresenter(this);
@@ -49,7 +60,7 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
     @OnClick(R.id.connect_button_user_signin)
     public void signin() {
         if (areFieldsValid()) {
-            authPresenter.signin("user", username_user_signin.getText().toString(), password_user_signin.getText().toString());
+            authPresenter.signin(this,"utilisateur", username_user_signin.getText().toString(), password_user_signin.getText().toString());
         }
     }
 

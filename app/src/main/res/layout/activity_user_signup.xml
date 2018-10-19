@@ -9,18 +9,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/association_user_signup"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
+            android:background="@color/FireBrick"
             android:text="@string/user"
-            android:background="@color/LightCoral"/>
+            android:textColor="@color/White"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/user_user_signup"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
+            android:background="@color/Snow"
             android:text="@string/association"
-            android:background="@color/Snow"/>
+
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
@@ -32,82 +38,124 @@
         android:textColor="#FE5303"
         android:layout_marginTop="0dp"/>
 
-    <EditText
-        android:id="@+id/firstname_user_signup"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/firstname"
-        android:inputType="text"
-        android:layout_gravity="center"
-        />
+        android:layout_margin="10dp">
 
-    <EditText
-        android:id="@+id/lastname_user_signup"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/lastname"
-        android:inputType="text"
-        android:layout_gravity="center"
-        />
+        <EditText
+            android:id="@+id/firstname_user_signup"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/firstname"
+            android:inputType="text"
+            android:layout_gravity="center"
+            />
 
-    <EditText
-        android:id="@+id/password_user_signup"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        android:layout_gravity="center"
-        android:inputType="textPassword"
-        />
+        <EditText
+            android:id="@+id/lastname_user_signup"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/lastname"
+            android:inputType="text"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/mail_user_signup"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/mail"
-        android:inputType="textEmailAddress"
-        android:layout_gravity="center"
-        />
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/mail_user_signup"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/mail"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/birthdate_user_signup"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="@string/birthdate"
+            android:inputType="date"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <EditText
+            android:id="@+id/user_address_signup"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/address"
+            android:inputType="textPostalAddress" />
+
+        <EditText
+            android:id="@+id/user_postal_code_signup"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:hint="@string/postal_code"
+            android:inputType="number"
+            android:layout_marginStart="15dp" />
+    </LinearLayout>
+
 
     <EditText
         android:id="@+id/phone_number_user_signup"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="80dp"
         android:hint="@string/phone_number"
         android:inputType="phone"
-        android:layout_gravity="center"
-        />
+        android:layout_marginStart="80dp" />
 
     <TextView
         android:id="@+id/presentation_user_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        />
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:paddingTop="0px"
+        android:gravity="top"
+        android:layout_margin="30dp"
+        android:background="@color/GhostWhite"
+        android:hint="@string/description" />
 
     <EditText
-        android:id="@+id/birthdate_user_signup"
-        android:layout_width="200dp"
+        android:id="@+id/password_user_signup"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="@string/birthdate"
-        android:inputType="date"
         android:layout_gravity="center"
-        />
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/siret_user_signup"
-        android:layout_width="200dp"
+        android:id="@+id/confirm_password_user_signup"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="@string/siret"
-        android:inputType="number"
         android:layout_gravity="center"
-        />
-
+        android:layout_margin="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/register_button_user_signup"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/connection"
+        android:text="@string/register"
         android:layout_marginTop="10dp"
         android:background="@color/FireBrick"
         android:textColor="@color/White"
@@ -123,8 +171,9 @@
         android:text="@string/inscrit"
         android:textColor="@color/FireBrick"
         android:textAllCaps="false"
-        android:textSize="12dp"
+        android:textSize="12sp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp" />
 
 </LinearLayout>

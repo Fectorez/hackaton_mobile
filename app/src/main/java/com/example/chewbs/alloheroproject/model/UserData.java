@@ -13,7 +13,7 @@ public class UserData {
         PREF_USERNAME = username;
     }
 
-    public String getToken(Context c) {
+    public static String getToken(Context c) {
         prefs = c.getSharedPreferences(PREF_USERNAME, Context.MODE_PRIVATE);
         return prefs.getString(TOKEN_KEY, "");
     }
@@ -24,5 +24,5 @@ public class UserData {
         editor.putString(TOKEN_KEY, token);
         editor.apply();
     }
-
+//Bearer
 }

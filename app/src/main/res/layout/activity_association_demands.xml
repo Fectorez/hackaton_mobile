@@ -6,19 +6,19 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="70dp"
         android:gravity="center"
-        android:text="@string/assocations_to_help"
+        android:text="@string/asks"
         android:textStyle="bold"
         android:textSize="25sp"
         />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_associations"
-        android:layout_marginTop="75dp"
+        android:id="@+id/recyclerview_home_association"
+        android:layout_marginTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem = "@layout/item_association_user">
+        tools:listitem = "@layout/item_association">
     </android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>

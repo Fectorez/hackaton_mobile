@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 28
@@ -35,6 +34,9 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:28.0.0'
 
     //AndroidNetworking
-    implementation group: 'com.amitshekhar.android', name: 'android-networking', version: '1.0.0'
+    implementation group: 'com.amitshekhar.android', name: 'android-networking', version: '1.0.2'
+
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 
 }

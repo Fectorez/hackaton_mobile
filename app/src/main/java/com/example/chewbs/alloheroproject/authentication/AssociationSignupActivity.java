@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.chewbs.alloheroproject.R;
-import com.example.chewbs.alloheroproject.association.AssociationHomeActivity;
+import com.example.chewbs.alloheroproject.association.AssociationDemandListActivity;
 import com.example.chewbs.alloheroproject.model.AssociationData;
 import com.example.chewbs.alloheroproject.presenter.AuthPresenter;
 import com.example.chewbs.alloheroproject.view.SignupView;
@@ -30,12 +30,14 @@ public class AssociationSignupActivity extends AppCompatActivity implements Sign
     EditText mail_association_signup;
     @BindView(R.id.phone_number_association_signup)
     EditText phone_number_association_signup;
+    /*
     @BindView(R.id.address_association_signup)
     EditText address_association_signup;
     @BindView(R.id.postal_code_association_signup)
     EditText postal_code_association_signup;
     @BindView(R.id.city_association_signup)
     EditText city_association_signup;
+    */
     @BindView(R.id.password_association_signup)
     EditText password_association_signup;
     @BindView(R.id.siret_association_signup)
@@ -79,7 +81,7 @@ public class AssociationSignupActivity extends AppCompatActivity implements Sign
 
         associationData.setToken(this, token);
 
-        Intent intent = new Intent(AssociationSignupActivity.this, AssociationHomeActivity.class);
+        Intent intent = new Intent(AssociationSignupActivity.this, AssociationDemandListActivity.class);
         startActivity(intent);
     }
 
@@ -99,9 +101,9 @@ public class AssociationSignupActivity extends AppCompatActivity implements Sign
         data.add(name_association_signup.getText().toString());
         data.add(mail_association_signup.getText().toString());
         data.add(phone_number_association_signup.getText().toString());
-        data.add(address_association_signup.getText().toString());
-        data.add(postal_code_association_signup.getText().toString());
-        data.add(city_association_signup.getText().toString());
+        //data.add(address_association_signup.getText().toString());
+        //data.add(postal_code_association_signup.getText().toString());
+        //data.add(city_association_signup.getText().toString());
         data.add(password_association_signup.getText().toString());
         data.add(siret_association_signup.getText().toString());
 

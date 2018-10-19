@@ -4,18 +4,40 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/heroes"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/return_demand"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@color/FireBrick"
+            android:text="@string/retour"
+            android:textSize="25sp"
+            android:textColor="@color/White"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_user_signin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/Snow"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="@string/heroes"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="15dp" />
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_heroes"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="70dp"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem = "@layout/item_user">

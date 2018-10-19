@@ -9,17 +9,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/association_user_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
+            android:background="@color/FireBrick"
             android:text="@string/user"
-            android:background="@color/LightCoral"/>
+            android:textColor="@color/White"
+            android:textStyle="bold" />
         <Button
             android:id="@+id/user_user_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/association"
+            android:textAllCaps="false"
             android:background="@color/Snow"/>
 
     </LinearLayout>
@@ -34,20 +38,22 @@
 
     <EditText
         android:id="@+id/username_user_signin"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:hint="@string/username"
         android:layout_gravity="center"
+        android:text="@string/email_test"
         android:layout_marginTop="40dp"
         />
 
     <EditText
         android:id="@+id/password_user_signin"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:layout_gravity="center"
         android:inputType="textPassword"
+        android:text="@string/password_test"
         android:layout_marginTop="30dp"
         />
 
