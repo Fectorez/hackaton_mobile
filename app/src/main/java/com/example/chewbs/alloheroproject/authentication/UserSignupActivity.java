@@ -87,6 +87,8 @@ public class UserSignupActivity extends AppCompatActivity implements SignupView 
     }
 
     boolean areFieldsValid() {
+
+        //if (firstname_user_signup.getText())
         for (String element : data) {
             if (element.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "Au moins un champs incomplet.", Toast.LENGTH_LONG).show();

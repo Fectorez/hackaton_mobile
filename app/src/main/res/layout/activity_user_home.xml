@@ -1,17 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.UserHomeActivity">
+    android:orientation="vertical"
+    tools:context=".authentication.UserSigninActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="70dp"
-        tools:srcCompat="@tools:sample/avatars"
-        />
-</android.support.constraint.ConstraintLayout>
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/FireBrick" />
+
+            <Button
+                android:id="@+id/association_association_signin"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:background="@color/FireBrick"
+                android:text="@string/menu"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/go_to_profile"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="@color/Snow"
+            android:text="@string/association"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/disconnect"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="@color/Snow"
+            android:text="@string/disconnect"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/association_search"
+        android:textColor="@color/FireBrick"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/association_search_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:hint="@string/association_name" />
+
+    <EditText
+        android:id="@+id/association_keyword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:hint="@string/keywords"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/search_association"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:background="@color/FireBrick"
+        android:text="@string/search"
+        android:textColor="@color/White" />
+
+</LinearLayout>

@@ -1,12 +1,6 @@
 package com.example.chewbs.alloheroproject.presenter;
 
-import android.Manifest;
-import android.app.Application;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.util.Log;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
@@ -38,8 +32,6 @@ public class AuthPresenter {
 
         JSONObject userJson = new JSONObject();
         try {
-            Log.e("USERNAME", username);
-            Log.e("PASSWORD", password);
             userJson.put("email", username);
             userJson.put("password", password);
 
@@ -56,14 +48,11 @@ public class AuthPresenter {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.e("BOUYAKA", "Victoire");
-                        Log.e("HTTP Request", baseUrl + type + "/loginUser");
                         signinView.authenticate("Bearer " + response);
                     }
 
                     @Override
                     public void onError(ANError error) {
-                        Log.e("HTTP Request", baseUrl + type + "/loginUser");
                         signinView.errorConnectData();
                         error.printStackTrace();
                     }

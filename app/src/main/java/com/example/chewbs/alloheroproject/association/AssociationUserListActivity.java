@@ -55,4 +55,9 @@ public class AssociationUserListActivity extends AppCompatActivity implements As
         adapter.setListener(this);
         recyclerView.setAdapter(adapter);
     }
+
+    @Override
+    public void findAllAssociations(List<Association> list_association) {
+
+    }
 }

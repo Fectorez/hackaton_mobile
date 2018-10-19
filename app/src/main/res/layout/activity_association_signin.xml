@@ -11,22 +11,22 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/association_association_signin"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:background="@color/FireBrick"
-            android:text="@string/user"
-
-            android:textColor="@color/White"
-            android:textStyle="bold" />
-        <Button
             android:id="@+id/user_association_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="@string/association"
-            android:backgroundTintMode="src_in"
             android:textAllCaps="false"
-            android:background="@color/Snow"/>
+            android:background="@color/Snow"
+            android:text="@string/user"
+
+            />
+        <Button
+            android:id="@+id/association_association_signin"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="@string/association"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:background="@color/FireBrick"/>
 
     </LinearLayout>
 

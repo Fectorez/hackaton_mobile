@@ -12,7 +12,6 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.androidnetworking.AndroidNetworking;
 import com.example.chewbs.alloheroproject.R;
 import com.example.chewbs.alloheroproject.model.User;
 import com.example.chewbs.alloheroproject.model.UserData;
@@ -39,12 +38,6 @@ public class UserSigninActivity extends AppCompatActivity implements SigninView 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_signin);
-
-        int permissionCheck = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.INTERNET);
-
-        Log.e("INTERNET1", String.valueOf(permissionCheck));
-        Log.e("INTERNET2", String.valueOf(PackageManager.PERMISSION_GRANTED));
 
         ButterKnife.bind(this);
 

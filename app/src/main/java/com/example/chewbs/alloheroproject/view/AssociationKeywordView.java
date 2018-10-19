@@ -4,6 +4,6 @@ import com.example.chewbs.alloheroproject.model.Association;
 
 import java.util.List;
 
-public interface AssociationView {
-    void findAllAssociations(List<Association> list_association);
+public interface AssociationKeywordView {
+    void findAssociationByKeyword(List<Association> list_associations);
 }

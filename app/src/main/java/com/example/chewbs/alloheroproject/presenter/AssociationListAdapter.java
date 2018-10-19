@@ -35,7 +35,6 @@ public class AssociationListAdapter extends RecyclerView.Adapter<AssociationList
         return new ViewHolder(itemView);
     }
 
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Association association = asksList.get(position);
@@ -44,7 +43,7 @@ public class AssociationListAdapter extends RecyclerView.Adapter<AssociationList
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 if (listener != null) {
-                    listener.onAskClick(association);
+                    listener.onDemandClick(association);
                 }
             }
         });
@@ -65,6 +64,6 @@ public class AssociationListAdapter extends RecyclerView.Adapter<AssociationList
     }
 
     public interface Listener {
-        void onAskClick(Association association);
+        void onDemandClick(Association association);
     }
 }

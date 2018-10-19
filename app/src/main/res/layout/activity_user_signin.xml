@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/association_user_signin"
+            android:id="@+id/user_user_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:background="@color/FireBrick"
@@ -19,7 +19,7 @@
             android:textColor="@color/White"
             android:textStyle="bold" />
         <Button
-            android:id="@+id/user_user_signin"
+            android:id="@+id/association_user_signin"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="@string/association"

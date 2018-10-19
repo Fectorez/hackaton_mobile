@@ -39,6 +39,7 @@
         <activity android:name=".user.UserSelectedAssociationActivity" />
         <activity android:name=".association.AssociationUserListActivity">
         </activity>
+        <activity android:name=".user.UserProfileActivity" />
     </application>
 
 </manifest>
